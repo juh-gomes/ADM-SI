@@ -1,0 +1,35 @@
+{
+  "name": "adm-si",
+  "version": "1.0.0",
+  "description": "Welcome to the ADM-SI project!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juh-gomes/ADM-SI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/juh-gomes/ADM-SI/issues"
+  },
+  "homepage": "https://github.com/juh-gomes/ADM-SI#readme",
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "prisma": "^7.8.0",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typerscript": "^0.2.3"
+  }
+}
