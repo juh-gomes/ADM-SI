@@ -1,0 +1,19 @@
+http://localhost:3000/cliente/
+
+###
+
+POST http://localhost:3000/cliente/
+content-type: application/json
+
+{
+    "nome": "Julia Gomes"
+    "email": "juliaa_go23@gmail.com"
+     "telefone": "(19)98201-6408" }
+
+{
+    "nome":"Pastel de Frango",
+    "categoria": "Pasteis"
+    "preco": "15,00"
+    "estoqueMinimo": 10
+
+}

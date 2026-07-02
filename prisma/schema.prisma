@@ -18,5 +18,67 @@ model Cliente {
   email     String   @unique
   telefone  String 
   createdAt DateTime @default (now())
+
+  pedido Pedido[] 
 }
 
+
+
+model Produto {
+  id            Int      @id @default(autoincrement())
+  nome          String 
+  categoria     String
+  preco         Float
+  estoqueMinimo Int
+
+  estoque       Estoque[] 
+}
+
+model Fornecedor {
+  id            Int      @id @default(autoincrement())
+   nome         String
+  email         String   @unique
+  telefone      String 
+
+  compras       Compra[] 
+}
+
+  model Compra {
+     id            Int      @id @default(autoincrement())
+     fornecedorId    Int
+     fornecedor    Fornecedor @relation(fields: [fornecedorId], references: [id])
+
+
+     data          DateTime @default(now())
+     valor         Float 
+  }
+
+model Estoque { 
+  id            Int      @id @default(autoincrement())
+  produtoId     Int
+  produto       Produto @relation(fields: [produtoId], references: [id])
+
+  tipo          String
+  quantidade    Int  
+  data          DateTime @default(now())
+}
+
+model Pedido {
+  id            Int      @id @default(autoincrement())
+  clienteId     Int
+  cliente       Cliente  @relation(fields: [clienteId], references: [id])
+
+  
+ data          DateTime @default(now())
+ status        String
+
+ valor         Float
+}
+
+model Usuario {
+  id            Int      @id @default(autoincrement())
+   nome         String
+  email         String   @unique
+  senha         String
+  perfil        String
+}
